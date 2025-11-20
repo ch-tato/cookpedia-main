@@ -1,0 +1,41 @@
+name: Build and deploy WAR to Azure Web App (Tomcat)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml -DskipTests
+
+      # Optional: rename produced WAR to ROOT.war so app serves at /
+      - name: Rename WAR to ROOT.war (optional)
+        if: always()
+        run: |
+          ls -la target
+          WARFILE=$(ls target/*.war | head -n 1)
+          echo "Found war: $WARFILE"
+          cp "$WARFILE" target/ROOT.war
+          ls -la target
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'cookpedia'        # replace with your App Service name
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: 'target/ROOT.war'               # or 'target/*.war' if you don't rename
