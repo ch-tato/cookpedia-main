@@ -1,0 +1,77 @@
+.filter-section {
+    margin-top: 100px;
+    justify-items: center;
+}
+
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.top-filter {
+    padding: 16px;
+}
+
+.bottom-filter {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.filter-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.filter-bar input[type="text"] {
+    padding: 8px 12px;
+    border: none;
+    font-size: 14px;
+    min-width: 200px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.filter-bar input[type="text"]:focus {
+    border-color: var(--brand-brown);
+    transform: translateY(-6px) scale(1.03);
+}
+
+.filter-bar button {
+    padding: 8px 14px;
+    font-weight: 500;
+    background: var(--brand-gray);
+    border: none;
+    margin-left: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filter-bar button:hover {
+    color: var(--brand-orange);
+    background: var(--brand-brown);
+    transform: translateY(-6px) scale(1.03);
+}
+
+.filter-bar select {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.filter-bar select:hover,
+.filter-bar select:focus {
+    border-color: var(--brand-brown);
+    transform: translateY(-6px) scale(1.03);
+}
+
+.recipes {
+    padding-bottom: 100px;
+}

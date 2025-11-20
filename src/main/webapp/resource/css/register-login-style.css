@@ -1,0 +1,95 @@
+:root {
+    --brand-orange: #eb5e28;
+    --brand-black: #252422;
+    --brand-brown: #403d39;
+    --brand-silver: #ccc5b9;
+    --brand-gray: #fffcf2;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-parent {
+    position: relative;
+    width: 420px;
+    background: var(--brand-silver);
+    padding: 40px 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.form-parent h1 {
+    margin-bottom: 30px;
+}
+
+.form-parent input {
+    width: 90%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid var(--brand-gray);
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-parent input:focus {
+    border: 1px solid var(--brand-orange);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.form-parent .submit {
+    width: 90%;
+    padding: 14px;
+    margin-top: 15px;
+    background: var(--brand-orange);
+    border: none;
+    color: var(--brand-gray);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.form-parent .submit:hover {
+    background: var(--brand-brown);
+    transform: scale(1.05);
+}
+
+.form-parent p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-parent p a {
+    margin-left: 5px;
+    color: var(--brand-orange);
+    text-decoration: none;
+}
+
+.form-parent p a:hover {
+    text-decoration: underline;
+}
+
+.back-arrow {
+    position: absolute;
+    width: auto;
+    top: 0;
+    left: 0;
+    padding: 8px 10px;
+    transform: translate(-10px, -10px);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--brand-gray);
+    background-color: var(--brand-brown);
+    transition: 0.2s ease;
+}
+
+.back-arrow:hover {
+    color: var(--brand-orange);
+    transform: scale(1.05);
+    transform: translate(-10px, -16px);
+}

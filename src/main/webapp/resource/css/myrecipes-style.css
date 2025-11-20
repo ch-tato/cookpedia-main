@@ -1,0 +1,96 @@
+.my-recipes-section {
+    padding: 80px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    color: var(--brand-black);
+}
+
+.page-header .subtitle {
+    color: var(--brand-brown);
+    margin-top: 8px;
+}
+
+.no-recipes {
+    text-align: center;
+    align-self: center;
+    color: var(--brand-brown);
+    font-style: italic;
+}
+
+.card-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 6px 12px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-edit,
+.btn-delete {
+    transition: 0.55s cubic-bezier(.1,.72,.4,.97);
+}
+
+.btn-edit {
+    background-color: var(--brand-brown);
+}
+
+.btn-delete {
+    background-color: var(--brand-orange);
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    transform: translateY(-6px);
+    filter: drop-shadow(2px 2px 4px #3338);
+}
+
+.btn-edit:hover {
+    background-color: var(--brand-black);
+}
+
+.btn-delete:hover {
+    background-color: red;
+}
+
+.add-btn-wrapper {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 50px 0;
+    padding: 10px 8px;
+    width: 200px;
+    background-color: var(--brand-gray);
+    transition: 0.35s cubic-bezier(.1,.72,.4,.97);
+}
+
+.add-btn-wrapper:hover {
+    background-color: var(--brand-silver);
+    transform: translate(-50%, -6px);
+}
+
+.back-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link {
+    color: var(--brand-brown);
+    text-decoration: underline;
+    cursor: pointer;
+}
